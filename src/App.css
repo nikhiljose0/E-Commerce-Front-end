@@ -1,0 +1,13 @@
+*{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0px;
+
+}
+html, body {
+  min-height: 100%;
+  height: auto;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
