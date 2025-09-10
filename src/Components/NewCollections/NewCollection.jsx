@@ -1,31 +1,66 @@
-import React, { useEffect, useState } from 'react'
-import './NewCollection.css'
-import Item from '../Items/Item'
+// import React, { useEffect, useState } from 'react'
+// import './NewCollection.css'
+// import Item from '../Items/Item'
 
-function NewCollection() {
+// function NewCollection() {
 
 
-  const[new_collection,setNew_collection] = useState([]);
-  useEffect(()=>{
-fetch('https://e-commerce-back-end-bp7u.onrender.com/newcollections')
-.then((response)=>response.json())
-.then((data)=>setNew_collection(data));
-  },[]);
+//   const[new_collection,setNew_collection] = useState([]);
+//   useEffect(()=>{
+// fetch('https://e-commerce-back-end-bp7u.onrender.com/newcollections')
+// .then((response)=>response.json())
+// .then((data)=>setNew_collection(data));
+//   },[]);
 
   
+//   return (
+//     <div className='new-collection'>
+//         <h1>NEW COLLECTIONS</h1>
+//         <hr />
+//         <div className="collection">
+//             {new_collection.map((item,i)=>{
+//                 return <Item  key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price}/>
+//              })}
+
+//         </div>
+      
+//     </div>
+//   )
+// }
+
+// export default NewCollection
+import React, { useEffect, useState } from 'react';
+import './NewCollection.css';
+import Item from '../Items/Item';
+import BACKEND_URL from '../../config'  // ✅ import backend URL
+
+function NewCollection() {
+  const [new_collection, setNew_collection] = useState([]);
+
+  useEffect(() => {
+    fetch(`${BACKEND_URL}/newcollections`)   // ✅ using config.js
+      .then((response) => response.json())
+      .then((data) => setNew_collection(data));
+  }, []);
+
   return (
     <div className='new-collection'>
-        <h1>NEW COLLECTIONS</h1>
-        <hr />
-        <div className="collection">
-            {new_collection.map((item,i)=>{
-                return <Item  key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price}/>
-             })}
-
-        </div>
-      
+      <h1>NEW COLLECTIONS</h1>
+      <hr />
+      <div className="collection">
+        {new_collection.map((item, i) => (
+          <Item
+            key={i}
+            id={item.id}
+            name={item.name}
+            image={item.image}
+            new_price={item.new_price}
+            old_price={item.old_price}
+          />
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
-export default NewCollection
+export default NewCollection;
