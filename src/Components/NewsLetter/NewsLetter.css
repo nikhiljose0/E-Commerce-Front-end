@@ -1,4 +1,4 @@
-/* .newsletter{
+ .newsletter{
     width: 90%;
     height: 60vh;
     display: flex;
@@ -49,20 +49,6 @@
     cursor: pointer;
 
 } */
- .newsletter {
-    width: 80%;
-    height: 40vh;
-    display: flex;
-    margin-top: 200px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    padding: 0 20px;
-    background: linear-gradient(180deg, #fde1fd, #e1ffea22 60%);
-    gap: 25px;
-    border-radius: 12px;
-}
 
 .newsletter h1 {
     color: #222;
@@ -197,7 +183,7 @@
       height: 25vh;
       width: 100%;
       padding: 0;
-      gap: 15px;
+      gap: 9px;
   }
   .newsletter h1{
       font-size: 16px;
