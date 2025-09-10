@@ -171,12 +171,12 @@ a{
   }
   .nav-menu{
       display: none;
-      height: 80px;
+      height: 30px;
       width: 100%;
       position: absolute;
       background-color: white;
       justify-content: center;
-      top: 50px;
+      top: 65px;
   }
   .nav-menu-visible{
       display: flex;
@@ -187,15 +187,15 @@ a{
 }
 @media(max-width:500px){
   .navbar{
-      padding: 8px 0px;
+      padding: 6px px;
       gap: 0;
   }
   .nav-logo{
       transform: scale(0.8);
   }
   .nav-menu{
-      height: 70px;
-      top: 50px;
+      height: 20px;
+      top: 66px;
   }
   .nav-login-cart{
       transform: scale(0.8);
