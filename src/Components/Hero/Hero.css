@@ -30,6 +30,11 @@
     justify-content: center;
 
 }
+.hero-right img{
+    height: auto;
+    width: 100%;
+}
+
 
 .hero-left h2{
     color: #171717;
