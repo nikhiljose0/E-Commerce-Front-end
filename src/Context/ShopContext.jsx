@@ -18,12 +18,12 @@ const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart);
 
 useEffect(() => {
-  fetch("https://e-commerce-back-end-green-alpha.vercel.app/allproducts")
+  fetch("https://e-commerce-back-end-hp9r.vercel.app/allproducts")
     .then((Response) => Response.json())
     .then((data) => setAll_Product(data));
 
   if (localStorage.getItem("auth-token")) {
-    fetch("https://e-commerce-back-end-green-alpha.vercel.app/getcart", {
+    fetch("https://e-commerce-back-end-hp9r.vercel.app/getcart", {
       method: "POST",
       headers: {
         Accept: "application/form-data",
@@ -41,7 +41,7 @@ const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     if(localStorage.getItem("auth-token"))
     {
-      fetch('https://e-commerce-back-end-green-alpha.vercel.app/addtocart', {
+      fetch('https://e-commerce-back-end-hp9r.vercel.app/addtocart', {
       method: 'POST',
       headers: {
         Accept:'application/form-data',
@@ -60,7 +60,7 @@ const removeFromCart = (itemId) => {
   setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
 
   if (localStorage.getItem("auth-token")) {
-    fetch("https://e-commerce-back-end-green-alpha.vercel.app/removefromcart", {
+    fetch("https://e-commerce-back-end-hp9r.vercel.app/removefromcart", {
       method: "POST",
       headers: {
         "auth-token": localStorage.getItem("auth-token"),

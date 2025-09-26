@@ -7,7 +7,7 @@ function NewCollection() {
 
   const[new_collection,setNew_collection] = useState([]);
   useEffect(()=>{
-fetch('https://e-commerce-back-end-green-alpha.vercel.app/newcollections')
+fetch('https://e-commerce-back-end-hp9r.vercel.app/newcollections')
 .then((response)=>response.json())
 .then((data)=>setNew_collection(data));
   },[]);

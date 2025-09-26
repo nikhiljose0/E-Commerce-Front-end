@@ -7,7 +7,7 @@ function Popular() {
   const [popularProducts,setPopularProducts]=useState([]);
 
   useEffect(()=>{
-    fetch('https://e-commerce-back-end-green-alpha.vercel.app/popularinwomen')
+    fetch('https://e-commerce-back-end-hp9r.vercel.app/popularinwomen')
     .then((response)=>response.json())
     .then((data)=>setPopularProducts(data));
   },[])

@@ -18,7 +18,7 @@ function Login() {
   const login = async () => {
     console.log("Login Function Executed", formData);
         let responseData;
-    await fetch('https://e-commerce-back-end-green-alpha.vercel.app/login',{
+    await fetch('https://e-commerce-back-end-hp9r.vercel.app/login',{
       method:'POST',
       headers:{
         Accept:'application/form-data',
@@ -41,7 +41,7 @@ function Login() {
   const signup = async () => {
     console.log("SignUp Function Executed", formData);
         let responseData;
-    await fetch('https://e-commerce-back-end-green-alpha.vercel.app/signup',{
+    await fetch('https://e-commerce-back-end-hp9r.vercel.app/signup',{
       method:'POST',
       headers:{
         Accept:'application/form-data',
